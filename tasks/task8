@@ -1,0 +1,11 @@
+Within the impl block for GameState, create a publicly available function
+named new. This function will not accept any input paramaters, and will
+return the type GameState.
+
+OA:
+
+impl GameState {
+		pub fn new() -> GameState {
+				GameState {}
+		}
+}
