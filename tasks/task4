@@ -1,0 +1,7 @@
+Copy and paste this code into your structs.rs file. BTW, the pub keyword
+allows code to be shared between modules.
+
+//Game board dimensions that go inside struct.rs
+pub const SIZE: usize = 10;
+pub const ROWS: usize = SIZE;
+pub const COLUMNS: usize = SIZE * 2;
