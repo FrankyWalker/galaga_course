@@ -1,5 +1,13 @@
-Copy and paste this code into your structs.rs file. BTW, the pub keyword
-allows code to be shared between modules.
+Create three constants at the top of your structs.rs file.
+
+The first constant will be called SIZE and will be a usize bound to 10.
+
+The second constant will be called ROWS and will be a usize bound to SIZE.
+
+The third constant will be called COLUMNS, will be a usize and equal to
+SIZE * 2.
+
+NOTE: the pub keyword allows us to use code between modules.
 
 //Game board dimensions that go inside struct.rs
 pub const SIZE: usize = 10;
