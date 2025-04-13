@@ -1,0 +1,130 @@
+In game_state.rs, import these dependencies and modules:
+
+use std::io::stdout; 
+use crossterm::cursor::MoveTo;
+use crossterm::execute; //for terminal manipulation.
+
+Get a sense of crates.io and read up on crossterm here:
+
+https://crates.io/crates/crossterm
+
+Task9 is to display an outline around the board to act as a visual
+boundary. 
+
+Create a public method that takes a reference to self in your GameState impl called display_board.
+*Why do we want a reference to self instead of self itself?
+
+Copy and paste this code. It will be the first LoC in this method:
+
+execute!(stdout(), MoveTo(0, 0)).unwrap();
+
+Since your almost certainly unfamiliar with crossterm, let's explain whats
+going on. We know that execute is a macro because it ends with an exclama
+tion point, as all Rust macros do. You can see why we imported this in 
+crossterm::execute above. That is to say, execute is a crossterm specific
+macro.The purpose of this line of code is to move the terminal cursor to
+the top left corner (row 0, column 0). This ensures that the board is alw
+ays drawn in the same place. Remember that Rust will print from left to right,
+top to bottom, so the (0,0) coordinate is in the top left corner, and not
+the bottom left as is typical in graphs, math, etc.
+
+Step 1:
+
+Using a print statement(s), how would you draw the top border of the board?
+Put a + symbol in each of the two corners, and use - to connect them.
+
+HINT: Remember that we called in the code below in a prior task:
+
+use crate::structs::{COLUMNS, ROWS};
+
+Step 2:
+
+Draw the board's left and right borders using a print statement(s). Remem
+ber the hint from Step 1!
+
+Step 3: Draw the board's bottom border (same as the top border).
+
+OA:
+
+The answer to the question above, "Why do we want a reference to self in
+this method?" is because we don't want to take ownership of GameState. 
+Methods not taking ownership of values is common, though not absolute.
+
+pub fn display_board(&self) {
+		execute!(stdout(), MoveTo(0, 0)).unwrap();
+		
+		//Step 1: Draw the top border of the board
+		//We print some padding for centering, then a '+' for the corner,
+		//followed by horizontal dashes '-', then another '+' for the other corner
+		print!("           +");
+		for _ in 0..COLUMNS {
+				print!("-");
+		}
+		println!("+           ");  //End the line and finish top border
+
+		//Step 2: Draw the board's content rows
+		//For each row, draw a line that starts and ends with '|' (the side walls)
+		//In between, fill with spaces (representing the empty board cells)
+		for _ in 0..ROWS {
+				print!("           |");//Left border of the board
+				for _ in 0..COLUMNS {
+						print!(" "); //Empty space inside the board
+				}
+				println!("|           ");  //Right border of the board and end of line
+		}
+
+		//Step 3: Draw the bottom border (same as the top border)
+		print!("           +");
+		for _ in 0..COLUMNS {
+				print!("-");
+		}
+		println!("+           ");  //Complete the bottom of the board
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
