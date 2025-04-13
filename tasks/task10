@@ -3,9 +3,9 @@ takes a mutable reference to self and returns a Result type where the
 Ok variant is annotated with the Unit type and Err variant is annotated
 with a String.
 
-start_game is the main game logic runs continuosly until the game
+start_game is the main game logic runs continuously until the game
 ends. In the body of start_game, what control-flow construct allows whatever
-code inside of it to run continuosly, over and over again?
+code inside of it to run continuously, over and over again?
 
 Within the block of this control-flow construct, have the thread sleep for
 10 milliseconds. HINT: notice use std::thread and use std::time::Duration
@@ -33,9 +33,8 @@ thing else. This is a problem.
 
 Enter async code. Asynchronous code allows a program to perform non-blocking
 operations. So instead of Function2 holding up the entire program, you could
-say "Function2 when the player presses a key, wherever the program is cur
-rently at, it's going to register this key press and then run it's associ
-ated logic, but until then the program will continue on with the rest of 
+say "Function2 when the player presses a key, wherever the program is currently at, it's going to register this key press and then run it's
+associated logic, but until then the program will continue on with the rest of
 it's functions."
 
 OA:

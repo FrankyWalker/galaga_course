@@ -1,9 +1,9 @@
-Create another file within the src directory called game_state.rs. 
+git Create another file within the src directory called game_state.rs.
 
 We don't write all of our code in main.rs because it would be overwhelming.
-It's is preferred to seperate out the major logic of the codebase into
-seperate files, and then tie said logic into main. These seperate files
+It's is preferred to separate out the major logic of the codebase into
+separate files, and then tie said logic into main. These separate files
 are called modules.
 
-This means, suprisingly, that while the total LoC (lines of code) could be
-1000+ across the codebase, main.rs would be succint at ~30.
+This means, surprisingly, that while the total LoC (lines of code) could be
+1000+ across the codebase, main.rs would be succinct at ~30.

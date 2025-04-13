@@ -14,12 +14,12 @@ boundary.
 Create a public method that takes a reference to self in your GameState impl called display_board.
 *Why do we want a reference to self instead of self itself?
 
-Copy and paste this code. It will be the first LoC in this method:
+Copy and paste this code. It will be the first LoC (Line of Code) in this method:
 
 execute!(stdout(), MoveTo(0, 0)).unwrap();
 
 Since your almost certainly unfamiliar with crossterm, let's explain whats
-going on. We know that execute is a macro because it ends with an exclama
+going on. We know that execute is a macro because it ends with an exclaim
 tion point, as all Rust macros do. You can see why we imported this in 
 crossterm::execute above. That is to say, execute is a crossterm specific
 macro.The purpose of this line of code is to move the terminal cursor to
@@ -39,8 +39,7 @@ use crate::structs::{COLUMNS, ROWS};
 
 Step 2:
 
-Draw the board's left and right borders using a print statement(s). Remem
-ber the hint from Step 1!
+Draw the board's left and right borders using a print statement(s). Remember the hint from Step 1!
 
 Step 3: Draw the board's bottom border (same as the top border).
 

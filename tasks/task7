@@ -1,13 +1,13 @@
-Add a hash map dependancy to the top of game_state.rs file.
+Add a hash map dependency to the top of game_state.rs file.
 
 The type HashMap is included in the Standard Library, but is not included
 in the Prelude.
 
-If something is included in the SL, we don't need to pull in an external 
+If something is included in the SL (Standard Library), we don't need to pull in an external
 crate, it's found locally (but still needs to be imported into whatever
 file you are working with).
 
-Seperately, the Prelude includes common things like the Option type or 
+Separately, the Prelude includes common things like the Option type or
 basic traits like Clone. We don't need to import things that are found
 in the Prelude.
 
