@@ -1,0 +1,15 @@
+In structs.rs, make a public tuple struct named Cords with two fields,
+each of type pub usize.
+
+Note that you've probably only been exposed to Named-Field Structs so far
+like:
+
+pub struct Sandwich {
+		pub name: String,
+		pub price: f32,
+		pub is_toasted: bool,
+}
+
+There are multiple types of structs. Read about them here:
+
+https://doc.rust-lang.org/book/ch05-01-defining-structs.html
