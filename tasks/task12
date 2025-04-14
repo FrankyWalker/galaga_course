@@ -13,3 +13,17 @@ pub struct Sandwich {
 There are multiple types of structs. Read about them here:
 
 https://doc.rust-lang.org/book/ch05-01-defining-structs.html
+
+Create a derive attribute to implement Clone, Copy, Eq, Hash, and PartialEq
+on Cords.
+
+Create a public struct called Timer and a impl block for Timer.
+
+OA:
+
+#[derive(Clone, Copy, Eq, Hash, PartialEq)]
+pub struct Cords(pub usize, pub usize);
+
+pub struct Timer {};
+
+impl Timer {}
