@@ -38,8 +38,8 @@ This is particularly important in games where you need to maintain continuous ex
 
 ## Task TODO
 
-In main.rs, import the game_state module. Import the GameState struct from the
-game_state module with the use keyword.
+In main.rs, import the `game_state` module. Import the GameState struct from the
+`game_state` module with the use keyword.
 
 https://doc.rust-lang.org/book/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html
 
@@ -84,6 +84,17 @@ https://doc.rust-lang.org/std/keyword.await.html
 Finally, within main() finish the function with the Ok variant containing 
 the unit type.
 
+OA:
 
+||```mod game_state;
 
+use game_state::GameState;
+
+#[tokio::main] 
+async fn main() -> Result<(), String> {
+    let mut game = GameState::new(); 
+    game.start_game().await?; 
+    Ok(())
+}
+||```
 
