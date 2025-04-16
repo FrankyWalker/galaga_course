@@ -21,4 +21,9 @@ field?
 Create a field named `death_timer`. This is the timer for respawning after
 death.
 
-Create a field named `key_reader`. 
+Create a field named `key_reader`. This is an asynchronous key handler. It 
+allows us to handle keyboard input with blocking the rest of the program.
+
+## OA
+
+
