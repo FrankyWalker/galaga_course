@@ -1,4 +1,4 @@
-# Create three constants at the top of your structs.rs file.
+# Create three constants at the top of your structs.rs file.o
 
 
 1. The first constant will be called SIZE and will be an usize bound to 10.
@@ -12,7 +12,7 @@ NOTE: the pub keyword allows us to use code between modules.
 Game board dimensions that go inside struct.rs
 
 ---
-OA 
+## OA 
 ```rust
 pub const SIZE: usize = 10;
 pub const ROWS: usize = SIZE;
