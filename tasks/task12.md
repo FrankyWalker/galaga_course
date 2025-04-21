@@ -23,12 +23,4 @@ on `Cords`.
 
 Create a public struct called `Timer` and a impl block for `Timer`.
 
-## OA
-```rust
-#[derive(Clone, Copy, Eq, Hash, PartialEq)]
-pub struct Cords(pub usize, pub usize);
-
-pub struct Timer {};
-
-impl Timer {}
-```
+## OA:

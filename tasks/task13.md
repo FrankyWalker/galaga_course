@@ -13,9 +13,4 @@ or more advanced things that OpenGalaga won't touch on like animation
 frame timing.
 
 ## OA
-```rust
-pub struct Timer {
-    current_time: u64,
-    interval: u64,
-}
-```
+

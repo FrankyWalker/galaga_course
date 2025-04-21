@@ -11,12 +11,4 @@ set to `0`.
 Close out `new`.
 
 ## OA
-||```rust
-pub fn new(interval: u64) -> Self {
-    Timer {
-        current_time: 0,
-        interval,
-    }
-}
-```||
 

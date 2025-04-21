@@ -38,16 +38,6 @@ be reset to `0`. When this happens, `true` shall be returned. Otherwise,
 `false` shall be returned.
 
 ## OA
-```rust
-pub fn tick(&mut self) -> bool {
-    self.current_time += 1;
-    if self.current_time >= self.interval {
-        self.current_time = 0; 
-        true
-    } else {
-        false
-    }
-}
-```
+
 Extra Credit: why does the reference to self in the input parameter above
 need to be mutable?
